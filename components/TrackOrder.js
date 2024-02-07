@@ -18,7 +18,7 @@ export default function TrackOrder() {
             const response = await api.get(`api/get_order_details?orderId=${orderId}`)
             const data = response.data;
             if(data.responseCode === "004"){
-                dispatch({type:UPDATE_ORDER_SEARCH,payload:data})
+                dispatch({type:UPDATE_ORDER_SEARCH,payload:data.data})
                 Toast.show(data.responseDesc);
             }else if(data.responseCode === "005"){
                 Toast.show(data.responseDesc);
