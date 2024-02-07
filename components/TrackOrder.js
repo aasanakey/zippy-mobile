@@ -39,7 +39,7 @@ export default function TrackOrder() {
             <Text style={styles.messageText}>Enter your parcel tracking number</Text>
             <View style={styles.inputButtonWrapper}>
                 <View style={styles.inputView}>
-                    <TextInput style={styles.input} value={orderId}
+                    <TextInput style={styles.input} value={orderId} inputMode="text"
                         placeholder="Enter Tracking Number" onChangeText={setOrderId}
                     />
                     <FontAwesome style={styles.inputIcon} name="search" size={24} color="#4D4D4E" />
